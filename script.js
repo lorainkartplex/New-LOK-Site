@@ -110,7 +110,7 @@
   const revealEls = document.querySelectorAll(
     '.about-grid, .track-card, .class-card, ' +
     '.facility-item, .stat, .format-step, ' +
-    '.feature-card, .timeline-item, .highlight-card, .event-type-card, .content-grid'
+    '.feature-card, .timeline-item, .highlight-card, .event-type-card, .content-grid, .event-card'
   );
 
   revealEls.forEach(function (el, i) {
@@ -1054,6 +1054,63 @@
     eventForm.querySelectorAll('input, textarea, select').forEach(function (field) {
       field.addEventListener('input', function () {
         field.style.borderColor = '';
+      });
+    });
+  }
+
+  /* ---- Events page: Entity filter tabs ---- */
+  var eventsGrid = document.getElementById('events-grid');
+  var eventsEmpty = document.getElementById('events-empty');
+
+  if (eventsGrid) {
+    var filterBtns = document.querySelectorAll('.events-filter-btn');
+    var monthBtns = document.querySelectorAll('.events-month-btn');
+    var eventCards = eventsGrid.querySelectorAll('.event-card');
+    var activeEntity = 'all';
+    var activeMonth = 'all';
+
+    function applyFilters() {
+      var visibleCount = 0;
+      eventCards.forEach(function (card) {
+        var entityMatch = activeEntity === 'all' || card.getAttribute('data-entity') === activeEntity;
+        var cardDate = card.getAttribute('data-date') || '';
+        var cardMonth = cardDate.length >= 7 ? cardDate.substring(5, 7) : '';
+        var monthMatch = activeMonth === 'all' || cardMonth === activeMonth;
+        if (entityMatch && monthMatch) {
+          card.style.display = '';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      if (eventsEmpty) {
+        eventsEmpty.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+    }
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        activeEntity = btn.getAttribute('data-filter');
+        filterBtns.forEach(function (b) {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        applyFilters();
+      });
+    });
+
+    monthBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        activeMonth = btn.getAttribute('data-month');
+        monthBtns.forEach(function (b) {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        applyFilters();
       });
     });
   }
