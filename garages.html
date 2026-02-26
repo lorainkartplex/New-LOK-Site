@@ -71,34 +71,34 @@
           <li class="nav-dropdown">
             <a href="garages.html" class="nav-link">Kart Owners</a>
             <ul class="nav-submenu">
+              <li><a href="getting-started.html" class="nav-submenu-link">Getting Started</a></li>
               <li><a href="https://www.blackriverkartclub.com/" class="nav-submenu-link" target="_blank" rel="noopener">Black River Kart Club</a></li>
               <li><a href="garages.html" class="nav-submenu-link">Kart Storage</a></li>
               <li><a href="https://www.apexkartingacademy.com/" class="nav-submenu-link" target="_blank" rel="noopener">Apex Karting Academy</a></li>
+              <li><a href="https://www.kartzonena.com/" class="nav-submenu-link" target="_blank" rel="noopener">KartZone Dealership &amp; Service Center</a></li>
             </ul>
           </li>
           <li class="nav-dropdown">
-            <a href="rentals.html" class="nav-link">Experiences</a>
+            <a href="rentals.html" class="nav-link">Rentals</a>
             <ul class="nav-submenu">
               <li><a href="rentals.html#outdoor" class="nav-submenu-link">Outdoor Kart Rentals</a></li>
               <li><a href="rentals.html#indoor" class="nav-submenu-link">Indoor Electric Karting</a></li>
               <li><a href="simulators.html" class="nav-submenu-link">Sim Racing Arena</a></li>
-              <li><a href="group-events.html" class="nav-submenu-link">Group Events &amp; Parties</a></li>
             </ul>
           </li>
+          <li><a href="group-events.html" class="nav-link">Groups &amp; Corporate Events</a></li>
+          <li><a href="https://www.collisionbendbrewery.com/" class="nav-link" target="_blank" rel="noopener">Collision Bend Brewery</a></li>
+          <li><a href="events.html" class="nav-link">Event Calendar</a></li>
           <li class="nav-dropdown">
-            <a href="shop.html" class="nav-link">Track Partners</a>
-            <ul class="nav-submenu">
-              <li><a href="shop.html#kartzone" class="nav-submenu-link">KartZone Dealership</a></li>
-              <li><a href="shop.html#proshop" class="nav-submenu-link">Ohio Kart Parts</a></li>
-              <li><a href="https://www.apexkartingacademy.com/" class="nav-submenu-link" target="_blank" rel="noopener">Apex Karting Academy</a></li>
-              <li><a href="shop.html#brewery" class="nav-submenu-link">Collision Bend Brewery</a></li>
-            </ul>
-          </li>
-          <li><a href="events.html" class="nav-link">Events</a></li>
-          <li class="nav-dropdown">
-            <a href="hotel-lodging.html" class="nav-link">About</a>
+            <a href="hotel-lodging.html" class="nav-link">Visitors Info</a>
             <ul class="nav-submenu">
               <li><a href="hotel-lodging.html" class="nav-submenu-link">Hotel &amp; Lodging</a></li>
+              <li><a href="parking-camping.html" class="nav-submenu-link">Parking &amp; Camping</a></li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <a href="team.html" class="nav-link">About</a>
+            <ul class="nav-submenu">
               <li><a href="media.html" class="nav-submenu-link">Videos &amp; Photos</a></li>
               <li><a href="team.html" class="nav-submenu-link">Our Team</a></li>
               <li><a href="careers.html" class="nav-submenu-link">Careers</a></li>
@@ -136,65 +136,77 @@
     </div>
   </section>
 
-  <!-- ===== AMENITIES, BENEFITS & PRICING ===== -->
+  <!-- ===== STORAGE OPTIONS ===== -->
   <section class="content-section">
     <div class="container">
-      <div class="content-text-full">
-        <h2 class="content-title">Private Garages</h2>
-        <h3>Premium Amenities</h3>
-        <p>Make your race day setup as comfortable as it is efficient!</p>
-        <ul class="content-features--cols content-features--cols-2">
-          <li>Heated floors</li>
-          <li>Electric hookups</li>
-          <li>Air hose access</li>
-          <li>Built-in shelving</li>
-          <li>Lockable doors</li>
-          <li>Wi-Fi access</li>
-        </ul>
-        <p style="margin-top: 24px;">Garage tenants also enjoy access to a private, on-site bathroom that our team keeps clean and ready for you at all times. As a tenant, you'll always be first in line when it comes to service, parts, and race day support. From quick tune-ups to performance upgrades, our KartZone team is here to keep your kart running at its best so you can focus on what really matters &mdash; getting on track.</p>
+      <div class="content-text-full" style="text-align: center;">
 
-        <div class="pricing-row" style="margin-top: 40px;">
-          <div class="pricing-box">
-            <div class="pricing-label">Single</div>
-            <div class="pricing-size">12 &times; 15</div>
-            <div class="pricing-amount">$425<span>/mo</span></div>
+        <div class="garage-slideshow" id="garageSlideshow">
+          <div class="slideshow-window">
+            <img src="images/Kart Garage 4.jpg" alt="Aerial drone view of garage buildings and kart track" class="slideshow-img active" />
+            <img src="images/Kart Garage 1.jpg" alt="Kart garage exterior view with doors open" class="slideshow-img" />
+            <img src="images/Kart Garage 2.jpg" alt="Kart garage interior view from inside looking out" class="slideshow-img" />
+            <img src="images/Kart Garage 3.jpg" alt="Kart garage interior view from back wall" class="slideshow-img" />
+            <button class="slideshow-btn slideshow-prev" aria-label="Previous">&lsaquo;</button>
+            <button class="slideshow-btn slideshow-next" aria-label="Next">&rsaquo;</button>
           </div>
-          <div class="pricing-box">
-            <div class="pricing-label">Double</div>
-            <div class="pricing-size">24 &times; 15</div>
-            <div class="pricing-amount">$850<span>/mo</span></div>
+          <div class="slideshow-dots">
+            <button class="slideshow-dot active" data-slide="0"></button>
+            <button class="slideshow-dot" data-slide="1"></button>
+            <button class="slideshow-dot" data-slide="2"></button>
+            <button class="slideshow-dot" data-slide="3"></button>
           </div>
         </div>
-        <p style="margin-top: 28px;">Must sign a 3-year lease. A $1,000 security deposit is required at signing. Availability is limited, so early reservations are encouraged.</p>
-        <div class="btn-group" style="justify-content: center;">
-          <a href="index.html#contact" class="btn btn-primary">Reserve Now</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===== RACK STORAGE ===== -->
-  <section class="content-section dark">
-    <div class="container">
-      <div class="content-text-full">
-        <h2 class="content-title">Single Kart Rack Storage</h2>
-        <p>Don't need a full garage? Our single kart rack storage offers a convenient and affordable way to keep your kart at the track. Simply drop off your kart and pick it up whenever you're ready to race &mdash; no long-term lease required.</p>
-        <ul class="content-features--cols content-features--cols-2">
-          <li>Individual kart rack space</li>
-          <li>Secure indoor storage</li>
-          <li>Easy drop-off &amp; pick-up</li>
-          <li>No long-term lease</li>
-        </ul>
-        <div class="pricing-row" style="margin-top: 40px;">
-          <div class="pricing-box">
-            <div class="pricing-label">Single Kart Rack</div>
-            <div class="pricing-amount">$150<span>/mo</span></div>
+        <!-- Tabs -->
+        <div class="storage-tabs">
+          <button class="storage-tab active" data-tab="garages">Private Garages</button>
+          <button class="storage-tab" data-tab="rack">Single Kart Rack</button>
+        </div>
+
+        <!-- Tab: Private Garages -->
+        <div class="storage-panel active" id="tab-garages">
+          <p>Make your race day setup as comfortable as it is efficient! Our garages include heated floors, electric, pneumatic air hook-up, shelving, lockable doors, Wi-Fi, and more. Garage tenants also receive access to special events and discounted fitness club membership (coming 2026).</p>
+          <div class="pricing-row" style="margin-top: 32px;">
+            <div class="pricing-box">
+              <div class="pricing-label">Single</div>
+              <div class="pricing-size">12 &times; 15</div>
+              <div class="pricing-amount">$425<span>/mo</span></div>
+            </div>
+            <div class="pricing-box">
+              <div class="pricing-label">Double</div>
+              <div class="pricing-size">24 &times; 15</div>
+              <div class="pricing-amount">$850<span>/mo</span></div>
+            </div>
+          </div>
+          <p style="margin-top: 24px;">Must sign a 3-year lease. A $1,000 security deposit is required at signing. Availability is limited, so early reservations are encouraged.</p>
+          <p style="margin-top: 16px;">If you're interested in reserving a garage, you can click the button below to submit your request.</p>
+          <div class="btn-group" style="justify-content: center;">
+            <a href="reserve-storage.html" class="btn btn-primary">Reserve Now</a>
           </div>
         </div>
-        <p style="margin-top: 28px;">Perfect for kart owners who want trackside convenience without the commitment of a private garage. Space is limited &mdash; contact us to reserve your spot.</p>
-        <div class="btn-group" style="justify-content: center;">
-          <a href="index.html#contact" class="btn btn-primary">Reserve a Rack</a>
+
+        <!-- Tab: Single Kart Rack -->
+        <div class="storage-panel" id="tab-rack">
+          <p>Don't need a full garage? Our single kart rack storage offers a convenient and affordable way to keep your kart at the track. Simply drop off your kart and pick it up whenever you're ready to race &mdash; no long-term lease required.</p>
+          <ul class="content-features--cols content-features--cols-2" style="margin-top: 24px; text-align: left;">
+            <li>Individual kart rack space</li>
+            <li>Secure indoor storage</li>
+            <li>Easy drop-off &amp; pick-up</li>
+            <li>No long-term lease</li>
+          </ul>
+          <div class="pricing-row" style="margin-top: 32px;">
+            <div class="pricing-box">
+              <div class="pricing-label">Single Kart Rack</div>
+              <div class="pricing-amount">Coming Soon</div>
+            </div>
+          </div>
+          <p style="margin-top: 24px;">Perfect for kart owners who want trackside convenience without the commitment of a private garage. Space is limited &mdash; contact us to reserve your spot.</p>
+          <div class="btn-group" style="justify-content: center;">
+            <a href="reserve-storage.html" class="btn btn-primary">Reserve Now</a>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -211,16 +223,17 @@
               <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </button>
             <div class="faq-answer">
-              <p>Yes, but one person must be named on the lease for the unit and that person will assume responsibility for all parties involved. That person will also be the only one who can receive the additional benefits at KartZone.</p>
+              <p>Yes, but no more than a total of (4) named individuals can be on a lease. (1) person will be named as the primary lessee who will assume the responsibility for all parties involved and will be the primary point of contact.</p>
             </div>
           </div>
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              <span>Can I use my garage to work on a car or other motorsports equipment?</span>
+              <span>Can I use my garage to work on a car or other equipment?</span>
               <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </button>
             <div class="faq-answer">
               <p>No, the garages are to be used for kart racing purposes only.</p>
+              <p style="margin-top: 8px;">Please do not make us enforce this. Violations can result in the termination of your lease and permanent dismissal from the facility.</p>
             </div>
           </div>
           <div class="faq-item">
@@ -229,7 +242,8 @@
               <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </button>
             <div class="faq-answer">
-              <p>No, garages are only available during regular business hours. If there is an extraordinary circumstance that you must get into the garage late at night, we can provide temporary access but it must be worked out ahead of time.</p>
+              <p>Yes, but not yet. When we conclude the fencing &amp; security for the whole facility in 2026, garage tenants will be given 24/7 access.</p>
+              <p style="margin-top: 8px;">Until then, please work with KartZone staff if you need access to the property outside of regular business or event hours.</p>
             </div>
           </div>
           <div class="faq-item">
@@ -238,7 +252,62 @@
               <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </button>
             <div class="faq-answer">
-              <p>Your lease may be transferred (assigned) to another approved tenant with prior written consent from Lorain Ohio KartPlex. This means your lease can be assumed by a new party, provided they meet all qualification and approval requirements outlined in the lease agreement.</p>
+              <p>The lease is fully assumable and may be transferred to another party with owner approval.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is the heat source for the garage?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>The facility has inground boiler heat and the building will remain 65 degrees or warmer throughout the year.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I start a kart inside the garage?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No, due to insurance restrictions and general safety, all vehicles must be started outside the door of the garage.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Are utilities included?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, electric, gas, &amp; water are included with your lease payment.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>When will the parking lot be paved?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>The complete facility's asphalt and concrete drives and parking areas are scheduled for completion in March or April, 2026 or as soon as the winter weather breaks.</p>
+              <p style="margin-top: 8px;">The parking lot will be paved prior to the start of the 2026 competition season.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I use the area in front of the garage?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, each garage will have a designated 12ft x 10ft area in front of their garage door for use.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I run a business out of the garage?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No, commercial activity is not permitted inside Ohio Motorsports Park or Lorain Ohio KartPlex property.</p>
             </div>
           </div>
         </div>
@@ -279,5 +348,63 @@
   </button>
 
   <script src="script.js"></script>
+  <script>
+  (function() {
+    var imgs = document.querySelectorAll('#garageSlideshow .slideshow-img');
+    var dots = document.querySelectorAll('#garageSlideshow .slideshow-dot');
+    var current = 0;
+    var timer;
+
+    function goTo(n) {
+      imgs[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (n + imgs.length) % imgs.length;
+      imgs[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    function startAuto() {
+      timer = setInterval(function() { goTo(current + 1); }, 4000);
+    }
+
+    function resetAuto() {
+      clearInterval(timer);
+      startAuto();
+    }
+
+    document.querySelector('#garageSlideshow .slideshow-prev').addEventListener('click', function() {
+      goTo(current - 1);
+      resetAuto();
+    });
+
+    document.querySelector('#garageSlideshow .slideshow-next').addEventListener('click', function() {
+      goTo(current + 1);
+      resetAuto();
+    });
+
+    dots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        goTo(parseInt(this.getAttribute('data-slide')));
+        resetAuto();
+      });
+    });
+
+    startAuto();
+  })();
+
+  /* Storage Tabs */
+  (function() {
+    var tabs = document.querySelectorAll('.storage-tab');
+    var panels = document.querySelectorAll('.storage-panel');
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        tabs.forEach(function(t) { t.classList.remove('active'); });
+        panels.forEach(function(p) { p.classList.remove('active'); });
+        tab.classList.add('active');
+        document.getElementById('tab-' + tab.getAttribute('data-tab')).classList.add('active');
+      });
+    });
+  })();
+  </script>
 </body>
 </html>

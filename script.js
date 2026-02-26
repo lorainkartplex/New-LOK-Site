@@ -528,7 +528,7 @@
     var backBtn = document.getElementById('finderBack');
     var restartBtn = document.getElementById('finderRestart');
 
-    // All BRKC race classes
+    // All race classes
     var allClasses = [
       // 4-Stroke — Tillotson (recommended first)
       { name: 'Piston Kup/T4 Bambino', age: '5-7', ageMin: 5, ageMax: 7, weight: '150lbs', tire: 'Maxxis T4 Bambino', engine: 'Tillotson T4', type: '4-stroke' },
