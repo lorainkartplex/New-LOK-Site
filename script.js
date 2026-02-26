@@ -45,9 +45,17 @@
     });
   });
 
-  // Close nav when a submenu link is clicked
+  // Close nav when a submenu link is clicked (skip nested dropdown parents)
   mainNav.querySelectorAll('.nav-submenu-link').forEach(function (link) {
-    link.addEventListener('click', function () {
+    link.addEventListener('click', function (e) {
+      var parentDropdown = link.closest('.nav-submenu-dropdown');
+      if (parentDropdown && link === parentDropdown.querySelector(':scope > .nav-submenu-link')) {
+        // This is a nested dropdown toggle — don't close nav
+        if (!isMobile()) return;
+        e.preventDefault();
+        parentDropdown.classList.toggle('open');
+        return;
+      }
       mainNav.classList.remove('open');
       hamburger.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
@@ -244,24 +252,20 @@
   }
 
   /* ---- 3D drag-to-rotate track image ---- */
-  (function () {
-    var card = document.getElementById('track3d');
+  function initTrack3d(id) {
+    var card = document.getElementById(id);
     if (!card) return;
 
     var hint = card.parentElement.querySelector('.track-3d-hint');
 
-    // Current rotation state
     var rotX = 20;
     var rotY = -10;
-
-    // Velocity for inertia
     var velX = 0;
     var velY = 0;
-
-    var dragging   = false;
-    var lastX      = 0;
-    var lastY      = 0;
-    var rafId      = null;
+    var dragging = false;
+    var lastX = 0;
+    var lastY = 0;
+    var rafId = null;
 
     function applyTransform() {
       card.style.transform = 'rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg)';
@@ -271,7 +275,7 @@
       if (!dragging && (Math.abs(velX) > 0.05 || Math.abs(velY) > 0.05)) {
         rotY += velX;
         rotX -= velY;
-        rotX = Math.max(-75, Math.min(75, rotX)); // clamp vertical tilt
+        rotX = Math.max(-75, Math.min(75, rotX));
         velX *= 0.93;
         velY *= 0.93;
         applyTransform();
@@ -311,7 +315,6 @@
       rafId = requestAnimationFrame(inertiaLoop);
     }
 
-    // Mouse
     card.addEventListener('mousedown', function (e) {
       e.preventDefault();
       onStart(e.clientX, e.clientY);
@@ -319,7 +322,6 @@
     window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); });
     window.addEventListener('mouseup', onEnd);
 
-    // Touch
     card.addEventListener('touchstart', function (e) {
       e.preventDefault();
       onStart(e.touches[0].clientX, e.touches[0].clientY);
@@ -330,9 +332,11 @@
     }, { passive: false });
     window.addEventListener('touchend', onEnd);
 
-    // Set initial position
     applyTransform();
-  }());
+  }
+
+  initTrack3d('track3d');
+  initTrack3d('rentalTrack3d');
 
   /* ---- Smooth scroll for logo click ---- */
   document.querySelector('.logo').addEventListener('click', function (e) {
@@ -363,6 +367,30 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
+
+  /* ---- FAQ accordion ---- */
+  var faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.parentElement;
+      var answer = item.querySelector('.faq-answer');
+      var isActive = item.classList.contains('active');
+
+      // Close all
+      document.querySelectorAll('.faq-item.active').forEach(function (openItem) {
+        openItem.classList.remove('active');
+        openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        openItem.querySelector('.faq-answer').style.maxHeight = null;
+      });
+
+      // Open clicked if it wasn't already open
+      if (!isActive) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
 
   /* ---- Photo lightbox ---- */
   var lightbox    = document.getElementById('lightbox');
@@ -1056,6 +1084,52 @@
         field.style.borderColor = '';
       });
     });
+  }
+
+  /* ---- Homepage: Dynamic upcoming events from events.html ---- */
+  var upcomingGrid = document.getElementById('upcoming-events-grid');
+  if (upcomingGrid) {
+    fetch('events.html')
+      .then(function (res) { return res.text(); })
+      .then(function (html) {
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(html, 'text/html');
+        var cards = doc.querySelectorAll('.event-card');
+        var today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        // Convert to array, filter upcoming, sort by date
+        var upcoming = Array.prototype.slice.call(cards)
+          .filter(function (card) {
+            var dateStr = card.getAttribute('data-date');
+            if (!dateStr) return false;
+            var eventDate = new Date(dateStr + 'T00:00:00');
+            return eventDate >= today;
+          })
+          .sort(function (a, b) {
+            return new Date(a.getAttribute('data-date') + 'T00:00:00') - new Date(b.getAttribute('data-date') + 'T00:00:00');
+          });
+
+        // Show first 4
+        var count = Math.min(upcoming.length, 4);
+        for (var i = 0; i < count; i++) {
+          var card = upcoming[i].cloneNode(true);
+          // Add scroll-reveal animation
+          card.classList.add('reveal');
+          if (i % 3 === 1) card.classList.add('reveal-delay-1');
+          if (i % 3 === 2) card.classList.add('reveal-delay-2');
+          upcomingGrid.appendChild(card);
+          observer.observe(card);
+        }
+
+        // If no upcoming events, show a message
+        if (count === 0) {
+          upcomingGrid.innerHTML = '<p style="text-align:center;color:var(--light);grid-column:1/-1;">No upcoming events — check back soon!</p>';
+        }
+      })
+      .catch(function (err) {
+        console.error('Failed to load upcoming events:', err);
+      });
   }
 
   /* ---- Events page: Entity filter tabs ---- */
