@@ -3,8 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Careers | Lorain Ohio KartPlex</title>
-  <meta name="description" content="Join the Lorain Ohio KartPlex team — career opportunities in motorsports, operations, sales, mechanics, and more." />
+  <title>News &amp; Announcements | Lorain Ohio KartPlex</title>
+  <meta name="description" content="Stay up to date with KartPlex news, race results, facility updates, and community stories from the Lorain Ohio KartPlex." />
+  <meta name="keywords" content="Lorain Ohio KartPlex news, KartPlex announcements, race results, facility updates, karting news" />
+  <link rel="canonical" href="https://www.lorainkartplex.com/news.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="News &amp; Announcements | Lorain Ohio KartPlex" />
+  <meta property="og:description" content="Stay up to date with KartPlex news, race results, facility updates, and community stories." />
+  <meta property="og:image" content="images/track-outline.png" />
+  <meta property="og:url" content="https://www.lorainkartplex.com/news.html" />
+  <meta property="og:site_name" content="Lorain Ohio KartPlex" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="News &amp; Announcements | Lorain Ohio KartPlex" />
+  <meta name="twitter:description" content="Stay up to date with KartPlex news, race results, facility updates, and community stories." />
+  <meta name="twitter:image" content="images/track-outline.png" />
 
   <script>(function(){var t=localStorage.getItem('kartplex-theme');if(t==='dark'||(t===null&&window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.setAttribute('data-theme','dark')})()</script>
   <link rel="stylesheet" href="styles.css" />
@@ -50,7 +66,7 @@
       <nav id="main-nav" aria-label="Main navigation">
         <ul>
           <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="news.html" class="nav-link">News</a></li>
+          <li><a href="news.html" class="nav-link active">News</a></li>
           <li class="nav-dropdown">
             <span class="nav-link">Kart Owners</span>
             <ul class="nav-submenu">
@@ -122,67 +138,94 @@
   <!-- ===== PAGE HEADER ===== -->
   <section class="page-header">
     <div class="container">
-      <div class="section-label">Now Hiring</div>
-      <h1>Career Opportunities</h1>
-      <p class="page-header-sub">Join Ohio's premier karting facility and build your career in the motorsports industry</p>
+      <div class="section-label">Latest Updates</div>
+      <h1>News &amp; Announcements</h1>
+      <p class="page-header-sub">Stay up to date with KartPlex news, race results, facility updates, and community stories</p>
     </div>
   </section>
 
-  <!-- ===== WHY JOIN US + OPEN POSITIONS ===== -->
-  <section class="content-section">
+  <!-- ===== NEWS LISTING ===== -->
+  <section class="section content-section">
     <div class="container">
-      <div class="content-text-full" style="text-align:center; max-width:800px; margin:0 auto;">
-        <h2 class="content-title">Why Join Us</h2>
-        <p>We're not currently hiring, but we are collecting resumes for when we begin the interview process in March 2026. If you're passionate about motorsports, customer service, or hands-on work, we'd love to hear from you. Browse the positions below and apply using the link at the bottom of the page.</p>
-        <div style="margin-top: 28px;">
-          <a href="apply.html" class="btn btn-primary">Apply Now</a>
-        </div>
-      </div>
-      <div class="careers-grid" style="margin-top:48px;">
-        <div class="career-card">
-          <h3>Sales</h3>
-          <span class="career-type">Part-Time</span>
-          <p>Help customers discover karting. Manage retail and inventory. Provide product recommendations and deliver an exceptional guest experience.</p>
-        </div>
-        <div class="career-card">
-          <h3>Operations</h3>
-          <span class="career-type">Part-Time</span>
-          <p>Oversee daily operations. Coordinate track sessions. Supervise staff and enforce safety protocols across all facilities.</p>
-        </div>
-        <div class="career-card">
-          <h3>Mechanics</h3>
-          <span class="career-type">Part-Time</span>
-          <p>Maintain and repair rental karts. Provide technical support for kart owners. Manage shop equipment and keep the fleet race-ready.</p>
-        </div>
-        <div class="career-card">
-          <h3>Grounds</h3>
-          <span class="career-type">Part-Time</span>
-          <p>Maintain track surfaces and facility grounds. Handle landscaping, facility upkeep, and ensure a clean, professional environment.</p>
-        </div>
-        <div class="career-card">
-          <h3>Hospitality</h3>
-          <span class="career-type">Part-Time</span>
-          <p>Welcome guests and provide service information. Handle customer concerns and ensure every visitor has a great experience.</p>
-        </div>
-        <div class="career-card">
-          <h3>Seasonal Support</h3>
-          <span class="career-type">Part-Time</span>
-          <p>Support operations, event setup, and facility maintenance during peak seasons. A great entry point into the motorsports industry.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===== APPLY CTA ===== -->
-  <section class="content-section dark">
-    <div class="container">
-      <div class="content-text-full" style="text-align:center; max-width:700px; margin:0 auto;">
-        <h2 class="content-title">Ready to Join Our Team?</h2>
-        <p>Send your resume and the position you're interested in to the email below. We look forward to hearing from you.</p>
-        <div style="margin-top: 32px;">
-          <a href="apply.html" class="btn btn-primary">Apply Now</a>
-        </div>
+      <!-- Desktop category filter tabs -->
+      <div class="news-filter-nav" role="tablist" aria-label="Filter news by category">
+        <button class="news-cat-btn active" data-category="all" role="tab" aria-selected="true">All</button>
+        <button class="news-cat-btn" data-category="announcements" role="tab" aria-selected="false">Announcements</button>
+        <button class="news-cat-btn" data-category="race-results" role="tab" aria-selected="false">Race Results</button>
+        <button class="news-cat-btn" data-category="facility" role="tab" aria-selected="false">Facility Updates</button>
+        <button class="news-cat-btn" data-category="community" role="tab" aria-selected="false">Community</button>
       </div>
+
+      <!-- Mobile category dropdown -->
+      <div class="news-filter-mobile">
+        <select id="news-cat-mobile" aria-label="Filter news by category">
+          <option value="all">All Categories</option>
+          <option value="announcements">Announcements</option>
+          <option value="race-results">Race Results</option>
+          <option value="facility">Facility Updates</option>
+          <option value="community">Community</option>
+        </select>
+      </div>
+
+      <!-- News Grid -->
+      <div class="news-grid" id="news-grid">
+
+        <!-- BRKC Round 6 Race Report -->
+        <article class="news-card" data-category="race-results">
+          <a href="news/brkc-round-6-results.html" class="news-card-image-link" tabindex="-1" aria-hidden="true">
+            <img src="images/Kart Garage 4.jpg" alt="BRKC Round 6 race day at the Lorain Ohio KartPlex" class="news-card-img" loading="lazy" />
+          </a>
+          <div class="news-card-body">
+            <span class="news-card-badge">Race Results</span>
+            <h2 class="news-card-title">
+              <a href="news/brkc-round-6-results.html">BRKC Round 6: Fountain Survives Late Charge, McCrone Siblings Steal the Show</a>
+            </h2>
+            <div class="news-card-meta">October 18, 2025</div>
+            <p class="news-card-excerpt">Razor-thin margins, a sibling rivalry for the ages, and the comeback drive of the day. Full race report from Black River Kart Club Round 6 across six classes of competition.</p>
+            <a href="news/brkc-round-6-results.html" class="news-card-readmore">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Apex Karting Academy x Oliver Hodgson -->
+        <article class="news-card" data-category="announcements">
+          <a href="news/apex-oliver-hodgson-partnership.html" class="news-card-image-link" tabindex="-1" aria-hidden="true">
+            <img src="images/Oliver Karting Camp Photo 1 copy.jpg" alt="Apex Karting Academy announces Oliver Hodgson as Pro Karting Partner" class="news-card-img" loading="lazy" />
+          </a>
+          <div class="news-card-body">
+            <span class="news-card-badge">Announcements</span>
+            <h2 class="news-card-title">
+              <a href="news/apex-oliver-hodgson-partnership.html">Apex Karting Academy Announces Oliver Hodgson as First Pro Karting Partner</a>
+            </h2>
+            <div class="news-card-meta">February 11, 2026</div>
+            <p class="news-card-excerpt">Professional kart racer Oliver Hodgson joins Apex Karting Academy as its first Pro Karting Partner, bringing world-class credentials and launching Competition Karting Camps at the Lorain Ohio KartPlex.</p>
+            <a href="news/apex-oliver-hodgson-partnership.html" class="news-card-readmore">Read More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- LOK 2026 Launch Announcement -->
+        <article class="news-card" data-category="announcements">
+          <a href="news/grand-opening-announcement.html" class="news-card-image-link" tabindex="-1" aria-hidden="true">
+            <img src="images/Kart Garage 4.jpg" alt="Lorain Ohio KartPlex 2026 Launch Announcement" class="news-card-img" loading="lazy" />
+          </a>
+          <div class="news-card-body">
+            <span class="news-card-badge">Announcements</span>
+            <h2 class="news-card-title">
+              <a href="news/grand-opening-announcement.html">Lorain Ohio KartPlex Announces 2026 Launch</a>
+            </h2>
+            <div class="news-card-meta">January 1, 2026</div>
+            <p class="news-card-excerpt">Lorain Ohio KartPlex prepares to open its gates as one of the premier karting and motorsports entertainment complexes in the world, introducing Apex Karting Academy and a state-of-the-art facility.</p>
+            <a href="news/grand-opening-announcement.html" class="news-card-readmore">Read More &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Empty state -->
+      <div class="news-empty" id="news-empty" style="display: none;">
+        <p>No articles in this category yet. Check back soon!</p>
+      </div>
+
     </div>
   </section>
 
