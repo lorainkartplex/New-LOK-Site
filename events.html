@@ -135,7 +135,7 @@
   <section class="section events-section">
     <div class="container">
 
-      <!-- Filter Tabs -->
+      <!-- Filter Tabs (desktop) -->
       <div class="events-filter" role="tablist" aria-label="Filter events by entity">
         <button class="events-filter-btn active" data-filter="all" role="tab" aria-selected="true">All Events</button>
         <button class="events-filter-btn" data-filter="brkc" role="tab" aria-selected="false">Black River Kart Club</button>
@@ -147,7 +147,7 @@
         <button class="events-filter-btn" data-filter="kartzone" role="tab" aria-selected="false">KartZone</button>
       </div>
 
-      <!-- Month Navigation -->
+      <!-- Month Navigation (desktop) -->
       <div class="events-month-nav" role="tablist" aria-label="Filter events by month">
         <button class="events-month-btn active" data-month="all" role="tab" aria-selected="true">All Months</button>
         <button class="events-month-btn" data-month="03" role="tab" aria-selected="false">March</button>
@@ -158,6 +158,31 @@
         <button class="events-month-btn" data-month="08" role="tab" aria-selected="false">August</button>
         <button class="events-month-btn" data-month="09" role="tab" aria-selected="false">September</button>
         <button class="events-month-btn" data-month="10" role="tab" aria-selected="false">October</button>
+      </div>
+
+      <!-- Mobile filter dropdowns -->
+      <div class="events-filter-mobile">
+        <select id="filter-entity-mobile" aria-label="Filter by event type">
+          <option value="all">All Events</option>
+          <option value="brkc">Black River Kart Club</option>
+          <option value="rental">Outdoor Rental Karting</option>
+          <option value="sim">Apex Sim Racing Arena</option>
+          <option value="academy">Apex Karting Academy</option>
+          <option value="corporate">Corporate Event Center</option>
+          <option value="brewery">Collision Bend Brewery</option>
+          <option value="kartzone">KartZone</option>
+        </select>
+        <select id="filter-month-mobile" aria-label="Filter by month">
+          <option value="all">All Months</option>
+          <option value="03">March</option>
+          <option value="04">April</option>
+          <option value="05">May</option>
+          <option value="06">June</option>
+          <option value="07">July</option>
+          <option value="08">August</option>
+          <option value="09">September</option>
+          <option value="10">October</option>
+        </select>
       </div>
 
       <!-- Events Grid -->

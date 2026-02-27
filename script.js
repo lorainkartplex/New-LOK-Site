@@ -456,6 +456,19 @@
     });
   }
 
+  /* ---- Sponsors scroll arrows (mobile) ---- */
+  var sponsorsTrack = document.querySelector('.sponsors-track');
+  var arrowLeft = document.querySelector('.sponsors-arrow-left');
+  var arrowRight = document.querySelector('.sponsors-arrow-right');
+  if (sponsorsTrack && arrowLeft && arrowRight) {
+    arrowLeft.addEventListener('click', function () {
+      sponsorsTrack.scrollBy({ left: -160, behavior: 'smooth' });
+    });
+    arrowRight.addEventListener('click', function () {
+      sponsorsTrack.scrollBy({ left: 160, behavior: 'smooth' });
+    });
+  }
+
   /* ---- Photo gallery view more/less toggle ---- */
   var photoToggle = document.getElementById('photoToggle');
   var photoGrid = document.querySelector('.photo-grid');
@@ -1166,6 +1179,28 @@
         applyFilters();
       });
     });
+
+    /* ---- Mobile dropdown filters ---- */
+    var entitySelect = document.getElementById('filter-entity-mobile');
+    var monthSelect = document.getElementById('filter-month-mobile');
+    if (entitySelect) {
+      entitySelect.addEventListener('change', function () {
+        activeEntity = entitySelect.value;
+        filterBtns.forEach(function (b) {
+          b.classList.toggle('active', b.getAttribute('data-filter') === activeEntity);
+        });
+        applyFilters();
+      });
+    }
+    if (monthSelect) {
+      monthSelect.addEventListener('change', function () {
+        activeMonth = monthSelect.value;
+        monthBtns.forEach(function (b) {
+          b.classList.toggle('active', b.getAttribute('data-month') === activeMonth);
+        });
+        applyFilters();
+      });
+    }
   }
 
 })();
