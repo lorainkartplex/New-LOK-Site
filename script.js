@@ -168,6 +168,21 @@
   var FORMSPREE_ENDPOINT = 'https://formspree.io/f/xbdaavda';
 
   if (contactForm) {
+    // Pre-select subject from URL parameter
+    var urlParams = new URLSearchParams(window.location.search);
+    var subjectParam = urlParams.get('subject');
+    if (subjectParam) {
+      var subjectSelect = document.getElementById('subject');
+      if (subjectSelect) {
+        for (var i = 0; i < subjectSelect.options.length; i++) {
+          if (subjectSelect.options[i].text === subjectParam) {
+            subjectSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
 
@@ -219,6 +234,68 @@
     });
 
     contactForm.querySelectorAll('input, textarea, select').forEach(function (field) {
+      field.addEventListener('input', function () {
+        field.style.borderColor = '';
+      });
+    });
+  }
+
+  /* ---- Sponsor inquiry form (Formspree) ---- */
+  var sponsorForm = document.getElementById('sponsorForm');
+  var sponsorSuccess = document.getElementById('sponsor-form-success');
+
+  if (sponsorForm) {
+    sponsorForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var required = sponsorForm.querySelectorAll('[required]');
+      var valid = true;
+
+      required.forEach(function (field) {
+        field.style.borderColor = '';
+        if (!field.value.trim()) {
+          field.style.borderColor = '#e8000d';
+          valid = false;
+        }
+      });
+
+      if (!valid) return;
+
+      var submitBtn = sponsorForm.querySelector('button[type="submit"]');
+      submitBtn.textContent = 'Sending…';
+      submitBtn.disabled = true;
+
+      var data = new FormData(sponsorForm);
+
+      fetch('https://formspree.io/f/xjgezrqe', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (res) {
+          if (res.ok) {
+            sponsorSuccess.style.display = 'block';
+            sponsorForm.reset();
+            setTimeout(function () { sponsorSuccess.style.display = 'none'; }, 5000);
+          } else {
+            return res.json().then(function (json) {
+              throw new Error(json.errors ? json.errors.map(function (e) { return e.message; }).join(', ') : 'Submission failed');
+            });
+          }
+        })
+        .catch(function (err) {
+          console.error('Sponsor form error:', err);
+          sponsorSuccess.style.color = '#e8000d';
+          sponsorSuccess.textContent = 'Something went wrong. Please email us directly at info@lorainkartplex.com';
+          sponsorSuccess.style.display = 'block';
+        })
+        .finally(function () {
+          submitBtn.textContent = 'Submit Inquiry';
+          submitBtn.disabled = false;
+        });
+    });
+
+    sponsorForm.querySelectorAll('input, textarea, select').forEach(function (field) {
       field.addEventListener('input', function () {
         field.style.borderColor = '';
       });
