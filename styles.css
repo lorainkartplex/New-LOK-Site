@@ -3553,6 +3553,9 @@ ul { list-style: none; }
   gap: 20px;
   justify-items: center;
 }
+.features-grid-2col {
+  grid-template-columns: repeat(2, 1fr);
+}
 .feature-card {
   background: #ededed;
   border: 1px solid #ddd;
