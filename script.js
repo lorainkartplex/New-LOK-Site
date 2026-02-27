@@ -460,6 +460,7 @@
   }
   setupTabs('.class-tab', '.class-tab-panel');
   setupTabs('.mem-tab', '.mem-tab-panel');
+  setupTabs('.facility-tab', '.facility-tab-panel');
 
   /* ---- Video gallery view more/less toggle ---- */
   var videoToggle = document.getElementById('videoToggle');

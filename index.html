@@ -67,17 +67,17 @@
         <ul>
           <li><a href="#home" class="nav-link active">Home</a></li>
           <li class="nav-dropdown">
-            <a href="garages.html" class="nav-link">Kart Owners</a>
+            <span class="nav-link">Kart Owners</span>
             <ul class="nav-submenu">
               <li><a href="getting-started.html" class="nav-submenu-link">Getting Started</a></li>
-              <li><a href="https://www.blackriverkartclub.com/" class="nav-submenu-link" target="_blank" rel="noopener">Black River Kart Club</a></li>
+              <li><a href="brkc.html" class="nav-submenu-link">Black River Kart Club</a></li>
               <li><a href="garages.html" class="nav-submenu-link">Kart Storage</a></li>
               <li><a href="https://www.apexkartingacademy.com/" class="nav-submenu-link" target="_blank" rel="noopener">Apex Karting Academy</a></li>
               <li><a href="https://www.kartzonena.com/" class="nav-submenu-link" target="_blank" rel="noopener">KartZone Dealership &amp; Service Center</a></li>
             </ul>
           </li>
           <li class="nav-dropdown">
-            <a href="rentals.html" class="nav-link">Rentals</a>
+            <span class="nav-link">Rentals</span>
             <ul class="nav-submenu">
               <li><a href="rentals.html#outdoor" class="nav-submenu-link">Outdoor Kart Rentals</a></li>
               <li><a href="rentals.html#indoor" class="nav-submenu-link">Indoor Electric Karting</a></li>
@@ -158,71 +158,78 @@
         <p class="section-sub">A one-of-a-kind destination with everything under one roof — racing, rentals, simulators, events, dining, and more. The complex is currently under active construction and will be opening in phases. Explore the facilities below to see what's coming and when to expect each one to open.</p>
       </div>
 
-      <h3 class="features-category">Kart Owners</h3>
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>Black River Kart Club</h3>
-          <div class="feature-card-date">March 2026</div>
-          <p>Your ultimate destination for high-speed competition on our 0.85-mile international circuit — 18 technical turns, an 850-foot straightaway, and world-class racing conditions for professional kart drivers and kart owners.</p>
-          <a href="https://www.blackriverkartclub.com/" target="_blank" rel="noopener" class="btn btn-outline">Learn More</a>
-        </div>
-        <div class="feature-card">
-          <h3>KartZone</h3>
-          <div class="feature-card-date">March 2026</div>
-          <p>A premier karting dealership and full-service center with a retail store featuring gear and apparel, parts department, and complete kart packages.</p>
-          <a href="https://www.kartzonena.com/" target="_blank" rel="noopener" class="btn btn-outline">Learn More</a>
-        </div>
-        <div class="feature-card">
-          <h3>Private Kart Garages &amp; Single Rack Storage</h3>
-          <div class="feature-card-date">Available Now</div>
-          <p>Keep your kart trackside with single or double heated garage units, plus convenient in-and-out single rack storage options.</p>
-          <a href="garages.html" class="btn btn-outline">Learn More</a>
-        </div>
-        <div class="feature-card">
-          <h3>Apex Karting Academy</h3>
-          <div class="feature-card-date">April 2026</div>
-          <p>A driver development program featuring competitive karting camps for beginners to experienced pros — build your skills on a world-class circuit.</p>
-          <a href="https://www.apexkartingacademy.com/" target="_blank" rel="noopener" class="btn btn-outline">Learn More</a>
+      <div class="facility-tabs">
+        <button class="facility-tab active" data-tab="kart-owners">Kart Owners</button>
+        <button class="facility-tab" data-tab="rentals-entertainment">Rentals &amp; Entertainment</button>
+      </div>
+
+      <div class="facility-tab-panel active" id="tab-kart-owners">
+        <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+          <div class="feature-card">
+            <h3>Black River Kart Club</h3>
+            <div class="feature-card-date">March 2026</div>
+            <p>Your ultimate destination for high-speed competition on our 0.85-mile international circuit — 18 technical turns, an 850-foot straightaway, and world-class racing conditions for professional kart drivers and kart owners.</p>
+            <a href="brkc.html" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="feature-card">
+            <h3>KartZone</h3>
+            <div class="feature-card-date">March 2026</div>
+            <p>A premier karting dealership and full-service center with a retail store featuring gear and apparel, parts department, and complete kart packages.</p>
+            <a href="https://www.kartzonena.com/" target="_blank" rel="noopener" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="feature-card">
+            <h3>Kart Garages &amp; Rack Storage</h3>
+            <div class="feature-card-date">Available Now</div>
+            <p>Keep your kart trackside with single or double heated garage units, plus convenient in-and-out single rack storage options.</p>
+            <a href="garages.html" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="feature-card">
+            <h3>Apex Karting Academy</h3>
+            <div class="feature-card-date">April 2026</div>
+            <p>A driver development program featuring competitive karting camps for beginners to experienced pros — build your skills on a world-class circuit.</p>
+            <a href="https://www.apexkartingacademy.com/" target="_blank" rel="noopener" class="btn btn-outline">Learn More</a>
+          </div>
         </div>
       </div>
 
-      <h3 class="features-category">Rentals &amp; Entertainment</h3>
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>Outdoor Rental Karting</h3>
-          <div class="feature-card-date">May 2026</div>
-          <p>Hit the 0.43-mile outdoor rental circuit — designed for all ages and skill levels. No experience needed, just show up and drive.</p>
-          <a href="rentals.html#outdoor" class="btn btn-outline">Learn More</a>
-        </div>
-        <div class="feature-card">
-          <h3>Apex Sim Racing Arena</h3>
-          <div class="feature-card-date">Summer 2026</div>
-          <p>Professional-grade racing simulators where you can compete on world-famous circuits — leagues, walk-ins, and private events.</p>
-          <a href="simulators.html" class="btn btn-outline">Learn More</a>
-        </div>
-        <div class="feature-card">
-          <h3>Corporate Event Center &amp; Party Rooms</h3>
-          <div class="feature-card-date">Summer 2026</div>
-          <p>Multiple private rooms for smaller groups and a 500-person event center for large-scale corporate events, fundraisers, and celebrations.</p>
-          <a href="group-events.html" class="btn btn-outline">Learn More</a>
-        </div>
-        <div class="feature-card">
-          <h3>Collision Bend Brewery</h3>
-          <div class="feature-card-date">Summer 2026</div>
-          <p>Grab a craft beer and watch the racing action from the trackside taproom — the perfect place to unwind after a session on track.</p>
-          <a href="https://www.collisionbendbrewery.com/" target="_blank" rel="noopener" class="btn btn-outline">Learn More</a>
-        </div>
-        <div class="feature-card">
-          <h3>Indoor Electric Karting</h3>
-          <div class="feature-card-date">Fall 2026</div>
-          <p>A purpose-built indoor track with high-performance electric karts — race rain or shine, day or night, year-round.</p>
-          <a href="rentals.html#indoor" class="btn btn-outline">Learn More</a>
-        </div>
-        <div class="feature-card">
-          <h3>RC Track &amp; Hobby Shop</h3>
-          <div class="feature-card-date">2027</div>
-          <p>Indoor RC track with size and specs to be determined — stay tuned for the latest updates.</p>
-          <a href="#contact" class="btn btn-outline">Stay Tuned</a>
+      <div class="facility-tab-panel" id="tab-rentals-entertainment">
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>Outdoor Rental Karting</h3>
+            <div class="feature-card-date">May 2026</div>
+            <p>Hit the 0.43-mile outdoor rental circuit — designed for all ages and skill levels. No experience needed, just show up and drive.</p>
+            <a href="rentals.html#outdoor" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="feature-card">
+            <h3>Apex Sim Racing Arena</h3>
+            <div class="feature-card-date">Summer 2026</div>
+            <p>Professional-grade racing simulators where you can compete on world-famous circuits — leagues, walk-ins, and private events.</p>
+            <a href="simulators.html" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="feature-card">
+            <h3>Corporate Event Center &amp; Party Rooms</h3>
+            <div class="feature-card-date">Summer 2026</div>
+            <p>Multiple private rooms for smaller groups and a 500-person event center for large-scale corporate events, fundraisers, and celebrations.</p>
+            <a href="group-events.html" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="feature-card">
+            <h3>Collision Bend Brewery</h3>
+            <div class="feature-card-date">Summer 2026</div>
+            <p>Grab a craft beer and watch the racing action from the trackside taproom — the perfect place to unwind after a session on track.</p>
+            <a href="https://www.collisionbendbrewery.com/" target="_blank" rel="noopener" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="feature-card">
+            <h3>Indoor Electric Karting</h3>
+            <div class="feature-card-date">Fall 2026</div>
+            <p>A purpose-built indoor track with high-performance electric karts — race rain or shine, day or night, year-round.</p>
+            <a href="rentals.html#indoor" class="btn btn-outline">Learn More</a>
+          </div>
+          <div class="feature-card">
+            <h3>RC Track &amp; Hobby Shop</h3>
+            <div class="feature-card-date">2027</div>
+            <p>Indoor RC track with size and specs to be determined — stay tuned for the latest updates.</p>
+            <a href="#contact" class="btn btn-outline">Stay Tuned</a>
+          </div>
         </div>
       </div>
     </div>

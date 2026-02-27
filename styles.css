@@ -309,6 +309,9 @@ ul { list-style: none; }
 .nav-dropdown {
   position: relative;
 }
+.nav-dropdown > .nav-link {
+  cursor: pointer;
+}
 .nav-submenu {
   display: none;
   position: absolute;
@@ -624,6 +627,9 @@ ul { list-style: none; }
   border-radius: 8px;
   filter: drop-shadow(0 0 30px rgba(232,0,13,0.25));
 }
+.track-img-dark { display: none; }
+[data-theme="dark"] .track-img-light { display: none; }
+[data-theme="dark"] .track-img-dark { display: block; }
 .track-3d-hint {
   display: inline-block;
   margin-top: 14px;
@@ -3513,6 +3519,47 @@ ul { list-style: none; }
 .features-category:first-of-type {
   margin-top: 0;
 }
+
+/* Facility Tabs (homepage) */
+.facility-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 32px;
+  border-bottom: 2px solid var(--light-border);
+}
+.facility-tab {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  padding: 14px 36px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.facility-tab:hover {
+  color: var(--text-muted);
+}
+.facility-tab.active {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+.facility-tab-panel {
+  display: none;
+}
+.facility-tab-panel.active {
+  display: block;
+}
+@media (max-width: 600px) {
+  .facility-tab {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+}
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -4117,6 +4164,9 @@ ul { list-style: none; }
 .content-section.dark .content-features li {
   color: var(--light);
 }
+.content-section.dark .event-type-card .content-features li {
+  color: var(--text-dark);
+}
 .content-section.dark .coming-soon-badge {
   color: var(--white);
   border-color: rgba(255,255,255,0.4);
@@ -4549,6 +4599,7 @@ ul { list-style: none; }
   .content-visual { order: -1; }
   .content-icon-placeholder { width: 140px; height: 140px; font-size: 4rem; }
   .content-visual .track-3d-scene { max-width: 180px; margin: 0 auto; }
+  .content-visual .track-3d-scene.track-scene-lg { max-width: 280px !important; }
 }
 
 /* ============================================================
@@ -4873,7 +4924,7 @@ ul { list-style: none; }
   justify-content: center;
   gap: 6px;
   padding: 10px 14px;
-  background: var(--red);
+  background: var(--text-dark);
   color: var(--white);
   text-align: center;
 }
@@ -5004,6 +5055,9 @@ ul { list-style: none; }
 [data-theme="dark"] .events-month-btn.active {
   color: var(--red);
   border-bottom-color: var(--red);
+}
+[data-theme="dark"] .event-card-date {
+  background: var(--red);
 }
 [data-theme="dark"] .event-card {
   background: var(--dark-2);
