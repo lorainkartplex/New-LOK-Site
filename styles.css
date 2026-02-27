@@ -4924,7 +4924,7 @@ ul { list-style: none; }
   justify-content: center;
   gap: 6px;
   padding: 10px 14px;
-  background: var(--text-dark);
+  background: var(--red);
   color: var(--white);
   text-align: center;
 }
