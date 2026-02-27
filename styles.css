@@ -3583,7 +3583,8 @@ ul { list-style: none; }
 }
 .facility-tab {
   font-family: var(--font-heading);
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  font-weight: 700;
   letter-spacing: 0.05em;
   padding: 14px 36px;
   background: none;
@@ -4125,6 +4126,12 @@ ul { list-style: none; }
 .content-section .section-sub {
   color: var(--text-body);
 }
+.content-section.dark .section-header h2 {
+  color: var(--white);
+}
+.content-section.dark .section-sub {
+  color: var(--light);
+}
 .content-title {
   font-family: var(--font-heading);
   font-size: clamp(2.4rem, 5vw, 3.6rem);
@@ -4219,6 +4226,76 @@ ul { list-style: none; }
   font-size: 0.7rem;
   flex-shrink: 0;
 }
+.brkc-track-stats li {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+/* ── Race Fuel Page ── */
+.race-fuel-features {
+  align-items: center;
+}
+.race-fuel-features li {
+  justify-content: center;
+}
+.fuel-logo {
+  display: block;
+  max-width: 220px;
+  margin: 0 auto 32px;
+}
+.fuel-types {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin: 40px 0;
+}
+.fuel-type {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.fuel-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--red);
+  flex-shrink: 0;
+}
+.fuel-type-name {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--text-dark);
+  line-height: 1.1;
+}
+[data-theme="dark"] .fuel-type-name {
+  color: var(--white);
+}
+@media (max-width: 600px) {
+  .fuel-types {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+/* ── Welcome to Lorain Live Cams ── */
+.cam-label {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 12px;
+  color: var(--white);
+}
+.lorain-cams-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 600px) {
+  .lorain-cams-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .content-section.dark .content-features li {
   color: var(--light);
 }
