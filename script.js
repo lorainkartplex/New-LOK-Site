@@ -114,32 +114,6 @@
   window.addEventListener('scroll', updateActiveLink, { passive: true });
   updateActiveLink();
 
-  /* ---- Scroll-reveal animation ---- */
-  const revealEls = document.querySelectorAll(
-    '.about-grid, .track-card, .class-card, ' +
-    '.facility-item, .stat, .format-step, ' +
-    '.feature-card, .timeline-item, .highlight-card, .event-type-card, .content-grid, .event-card'
-  );
-
-  revealEls.forEach(function (el, i) {
-    el.classList.add('reveal');
-    if (i % 3 === 1) el.classList.add('reveal-delay-1');
-    if (i % 3 === 2) el.classList.add('reveal-delay-2');
-  });
-
-  const observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
-  );
-
-  revealEls.forEach(function (el) { observer.observe(el); });
 
   /* ---- Animated number counter for stats bar ---- */
   const statNums = document.querySelectorAll('.stat-num');
@@ -1124,12 +1098,7 @@
         var count = Math.min(upcoming.length, 4);
         for (var i = 0; i < count; i++) {
           var card = upcoming[i].cloneNode(true);
-          // Add scroll-reveal animation
-          card.classList.add('reveal');
-          if (i % 3 === 1) card.classList.add('reveal-delay-1');
-          if (i % 3 === 2) card.classList.add('reveal-delay-2');
           upcomingGrid.appendChild(card);
-          observer.observe(card);
         }
 
         // If no upcoming events, show a message
