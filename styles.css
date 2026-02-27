@@ -6498,6 +6498,15 @@ ul { list-style: none; }
 }
 
 /* Hero image */
+.news-article-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 0 0 32px;
+}
+.news-article-hero-grid .news-article-hero {
+  margin: 0;
+}
 .news-article-hero {
   margin: 0 0 32px;
   border-radius: var(--radius-lg);
@@ -6725,5 +6734,9 @@ ul { list-style: none; }
   }
   .news-article-body h2 {
     font-size: 1.15rem;
+  }
+  .news-article-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 }
