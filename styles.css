@@ -2743,6 +2743,35 @@ ul { list-style: none; }
 .finder-section .section-header h2 { color: var(--text-dark); }
 .finder-section .section-sub { color: var(--text-body); }
 
+.callout-box {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 16px 24px;
+  border-left: 4px solid var(--red);
+  background: rgba(232, 0, 13, 0.06);
+  border-radius: 0 6px 6px 0;
+}
+.callout-box p {
+  margin: 0;
+  font-family: var(--font-sub);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.callout-box a {
+  color: var(--red);
+  text-decoration: underline;
+}
+.callout-box a:hover {
+  text-decoration: none;
+}
+[data-theme="dark"] .callout-box {
+  background: rgba(232, 0, 13, 0.12);
+}
+[data-theme="dark"] .callout-box p {
+  color: var(--white);
+}
+
 .finder-card {
   max-width: 700px;
   margin: 0 auto;
@@ -3133,6 +3162,12 @@ ul { list-style: none; }
 
 /* Responsive */
 @media (max-width: 768px) {
+  .callout-box {
+    display: block;
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .callout-box p { font-size: 0.88rem; }
   .finder-card { padding: 28px 16px; }
   .finder-question { font-size: 1.4rem; }
   .finder-option {
