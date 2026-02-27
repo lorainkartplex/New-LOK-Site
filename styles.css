@@ -4279,6 +4279,77 @@ ul { list-style: none; }
   }
 }
 
+/* ── Welcome to Lorain Quick-Scroll Buttons ── */
+.quick-scroll-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+.quick-scroll-btn {
+  display: inline-block;
+  font-family: var(--font-sub);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 10px 20px;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.quick-scroll-btn:hover {
+  background: #c7000b;
+}
+.quick-scroll-toggle {
+  display: none;
+}
+@media (max-width: 768px) {
+  .quick-scroll-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 32px;
+    padding: 12px 24px;
+    font-family: var(--font-sub);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .quick-scroll-arrow {
+    font-size: 0.7rem;
+    transition: transform 0.3s;
+  }
+  .quick-scroll-toggle.open .quick-scroll-arrow {
+    transform: rotate(180deg);
+  }
+  .quick-scroll-btns {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12px;
+  }
+  .quick-scroll-btn {
+    width: 100%;
+    text-align: center;
+  }
+  .quick-scroll-btns.open {
+    display: flex;
+  }
+}
+
 /* ── Welcome to Lorain Live Cams ── */
 .cam-label {
   font-family: var(--font-heading);
@@ -4736,9 +4807,12 @@ ul { list-style: none; }
   .content-visual .track-3d-scene { max-width: 180px; margin: 0 auto; }
   .content-visual .track-3d-scene.track-scene-lg { max-width: 280px !important; }
   .content-text { text-align: center; }
+  .content-text .btn { display: block; margin: 16px auto 0; }
+  .content-text div[style] { justify-content: center !important; }
   .content-features { align-items: center; }
   .content-features li { justify-content: center; }
   .class-group-header { text-align: center; align-items: center; }
+  .section-header { margin-bottom: 36px; }
 }
 
 /* ============================================================

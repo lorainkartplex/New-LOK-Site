@@ -130,12 +130,23 @@
       <div class="content-text-full">
         <h3>The International City</h3>
         <p>Lorain, Ohio sits on the shores of Lake Erie and is one of the top 10 largest cities in the state. Known as "The International City" for its rich cultural diversity and welcoming communities, Lorain offers visitors a vibrant waterfront, stunning natural beauty, and a deep sense of history. Whether you're in town for a race weekend at Lorain Ohio KartPlex or exploring Northeast Ohio, there's plenty to see and do just minutes from the track.</p>
+        <button class="quick-scroll-toggle" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">Jump to Section <span class="quick-scroll-arrow">&#9660;</span></button>
+        <div class="quick-scroll-btns">
+          <a href="#live-cams" class="quick-scroll-btn">Live Cams</a>
+          <a href="#rockin-on-the-river" class="quick-scroll-btn">Rockin' on the River</a>
+          <a href="#black-river-landing" class="quick-scroll-btn">Black River Landing</a>
+          <a href="#charles-berry-bridge" class="quick-scroll-btn">Charles Berry Bridge</a>
+          <a href="#palace-theatre" class="quick-scroll-btn">Palace Theatre</a>
+          <a href="#lighthouse" class="quick-scroll-btn">Lighthouse &amp; Boat Tours</a>
+          <a href="#mile-long-pier" class="quick-scroll-btn">Mile-Long Pier</a>
+          <a href="#lakeview-park" class="quick-scroll-btn">Lakeview Park</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== LORAIN LIVE CAMS ===== -->
-  <section class="content-section dark">
+  <section id="live-cams" class="content-section dark">
     <div class="container">
       <div class="section-header center">
         <div class="section-label">Live from Lorain</div>
@@ -160,7 +171,7 @@
   </section>
 
   <!-- ===== ROCKIN' ON THE RIVER ===== -->
-  <section class="content-section">
+  <section id="rockin-on-the-river" class="content-section">
     <div class="container">
       <div class="content-grid reverse">
         <div class="content-visual">
@@ -175,70 +186,8 @@
     </div>
   </section>
 
-  <!-- ===== MILE-LONG PIER ===== -->
-  <section class="content-section dark">
-    <div class="container">
-      <div class="content-grid">
-        <div class="content-visual">
-          <img src="images/mile long pier image 1.jpg" alt="Mile-Long Pier on Lake Erie in Lorain, Ohio" />
-        </div>
-        <div class="content-text">
-          <h3>Mile-Long Pier</h3>
-          <p>Stretching out into Lake Erie, Lorain's Mile-Long Pier is one of the longest piers on the Great Lakes. Take a walk along the breakwall for panoramic lake views, enjoy fishing from the pier, or simply watch the waves roll in. It's one of the most iconic landmarks in the city and a must-visit for anyone coming to Lorain.</p>
-          <a href="https://www.lorainport.com/facility-rentals/mile-long-pier/" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 16px;">Visit Mile-Long Pier &#8599;</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CHARLES BERRY BASCULE BRIDGE ===== -->
-  <section class="content-section">
-    <div class="container">
-      <div class="content-grid reverse">
-        <div class="content-visual">
-          <img src="images/charles berry bridge 1.JPG" alt="Charles Berry Bascule Bridge in Lorain, Ohio" />
-        </div>
-        <div class="content-text">
-          <h3>Charles Berry Bascule Bridge</h3>
-          <p>The Charles Berry Bascule Bridge is the second largest bascule bridge in the world, spanning the Black River in downtown Lorain. Watch massive Great Lakes freighters pass through as the bridge rises to let them by &mdash; it's an unforgettable sight. The bridge connects the east and west sides of the city and is a defining piece of Lorain's industrial heritage.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FREIGHTERS ===== -->
-  <section class="content-section dark">
-    <div class="container">
-      <div class="content-grid">
-        <div class="content-visual">
-          <img src="images/freighter and big boat in lorain.JPG" alt="Great Lakes freighter in Lorain, Ohio" />
-        </div>
-        <div class="content-text">
-          <h3>Great Lakes Freighters</h3>
-          <p>Lorain's location at the mouth of the Black River on Lake Erie makes it a front-row seat for watching massive Great Lakes freighters navigate in and out of the harbor. These 1,000-foot vessels are an incredible sight as they pass under the Charles Berry Bridge and make their way along the river. Grab a spot on the pier or the riverbank and enjoy the show.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== LAKEVIEW PARK ===== -->
-  <section class="content-section">
-    <div class="container">
-      <div class="content-grid reverse">
-        <div class="content-visual">
-          <img src="images/Lakeview Park image 1.webp" alt="Lakeview Park in Lorain, Ohio" />
-        </div>
-        <div class="content-text">
-          <h3>Lakeview Park</h3>
-          <p>Lakeview Park is a beautiful lakefront park featuring sandy beaches, rose gardens, playgrounds, picnic areas, and sweeping views of Lake Erie. Managed by the Lorain County Metro Parks, it's the perfect spot to relax and unwind after a day at the track. The park also hosts community events and festivals throughout the year.</p>
-          <a href="https://www.loraincountymetroparks.com/lakeview-park" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 16px;">Visit Lakeview Park &#8599;</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== BLACK RIVER LANDING ===== -->
-  <section class="content-section dark">
+  <section id="black-river-landing" class="content-section dark">
     <div class="container">
       <div class="content-grid">
         <div class="content-visual">
@@ -253,8 +202,39 @@
     </div>
   </section>
 
+  <!-- ===== CHARLES BERRY BASCULE BRIDGE ===== -->
+  <section id="charles-berry-bridge" class="content-section">
+    <div class="container">
+      <div class="content-grid reverse">
+        <div class="content-visual">
+          <img src="images/freighter and big boat in lorain.JPG" alt="Charles Berry Bascule Bridge and freighter in Lorain, Ohio" />
+        </div>
+        <div class="content-text">
+          <h3>Charles Berry Bascule Bridge</h3>
+          <p>The Charles Berry Bascule Bridge spans the Black River in downtown Lorain with a 330-foot double-leaf bascule main span across 12 spans and 1,053 feet of bridge. When it opened in 1940, it was the largest bascule bridge in the world &mdash; today it remains the second longest. Carrying over 2,100 vehicles a day and averaging 700 openings per year for massive Great Lakes freighters, watching the bridge rise is an unforgettable sight and a defining piece of Lorain's heritage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LORAIN PALACE THEATRE ===== -->
+  <section id="palace-theatre" class="content-section dark">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-visual">
+          <img src="images/lorain palace theatre.jpg" alt="Lorain Palace Theatre in downtown Lorain, Ohio" />
+        </div>
+        <div class="content-text">
+          <h3>Lorain Palace Theatre</h3>
+          <p>The Lorain Palace Theatre is a 1,400-seat historic theatre in downtown Lorain that has been a cornerstone of the community for decades. Dedicated to promoting the arts, the Palace presents a wide variety of events including concerts, plays, recitals, private events, and so much more.</p>
+          <a href="https://lorainpalace.com/" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 16px;">Visit Lorain Palace Theatre &#8599;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== LORAIN LIGHTHOUSE & BOAT TOURS ===== -->
-  <section class="content-section">
+  <section id="lighthouse" class="content-section">
     <div class="container">
       <div class="content-grid reverse">
         <div class="content-visual">
@@ -263,10 +243,42 @@
         <div class="content-text">
           <h3>Lorain Lighthouse &amp; Boat Tours</h3>
           <p>The Lorain Lighthouse is one of the most photographed landmarks on Lake Erie. Built in 1917, this iconic structure stands at the end of the west breakwall and has been carefully restored by the Lorain Lighthouse Foundation. Boat tours to the lighthouse are offered through the Lorain Port &amp; Finance Authority &mdash; a must-do experience for visitors.</p>
-          <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px;">
+          <div class="btn-group" style="margin-top: 16px;">
             <a href="https://www.lorainlighthouse.com/" target="_blank" rel="noopener" class="btn btn-primary">Lorain Lighthouse Foundation &#8599;</a>
             <a href="https://www.lorainport.com/" target="_blank" rel="noopener" class="btn btn-primary">Lorain Port Authority &#8599;</a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MILE-LONG PIER ===== -->
+  <section id="mile-long-pier" class="content-section dark">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-visual">
+          <img src="images/mile long pier image 1.jpg" alt="Mile-Long Pier on Lake Erie in Lorain, Ohio" />
+        </div>
+        <div class="content-text">
+          <h3>Mile-Long Pier</h3>
+          <p>Stretching out into Lake Erie, Lorain's Mile-Long Pier is one of the longest piers on the Great Lakes. Take a walk along the breakwall for panoramic lake views, enjoy fishing from the pier, or simply watch the waves roll in. It's one of the most iconic landmarks in the city and a must-visit for anyone coming to Lorain.</p>
+          <a href="https://www.lorainport.com/facility-rentals/mile-long-pier/" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 16px;">Visit Mile-Long Pier &#8599;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LAKEVIEW PARK ===== -->
+  <section id="lakeview-park" class="content-section">
+    <div class="container">
+      <div class="content-grid reverse">
+        <div class="content-visual">
+          <img src="images/Lakeview Park image 1.webp" alt="Lakeview Park in Lorain, Ohio" />
+        </div>
+        <div class="content-text">
+          <h3>Lakeview Park</h3>
+          <p>Lakeview Park is a beautiful lakefront park featuring sandy beaches, rose gardens, playgrounds, picnic areas, and sweeping views of Lake Erie. Managed by the Lorain County Metro Parks, it's the perfect spot to relax and unwind after a day at the track. The park also hosts community events and festivals throughout the year.</p>
+          <a href="https://www.loraincountymetroparks.com/lakeview-park" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 16px;">Visit Lakeview Park &#8599;</a>
         </div>
       </div>
     </div>
