@@ -6498,15 +6498,6 @@ ul { list-style: none; }
 }
 
 /* Hero image */
-.news-article-hero-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin: 0 0 32px;
-}
-.news-article-hero-grid .news-article-hero {
-  margin: 0;
-}
 .news-article-hero {
   margin: 0 0 32px;
   border-radius: var(--radius-lg);
@@ -6519,6 +6510,62 @@ ul { list-style: none; }
   height: 100%;
   object-fit: cover;
   object-position: center;
+  display: block;
+}
+
+/* Slideshow */
+.news-slideshow {
+  margin: 0 0 32px;
+}
+.news-slideshow-main {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: var(--dark-3);
+  margin: 0;
+}
+.news-slideshow-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.news-slideshow-img.active {
+  opacity: 1;
+}
+.news-slideshow-thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.news-slideshow-thumb {
+  flex: 1;
+  padding: 0;
+  border: 3px solid transparent;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  background: none;
+  aspect-ratio: 16 / 9;
+  opacity: 0.5;
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+.news-slideshow-thumb.active {
+  opacity: 1;
+  border-color: var(--red);
+}
+.news-slideshow-thumb:hover {
+  opacity: 0.85;
+}
+.news-slideshow-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -6596,6 +6643,12 @@ ul { list-style: none; }
 }
 [data-theme="dark"] .news-article-body h2 {
   color: var(--white);
+}
+[data-theme="dark"] .news-slideshow-thumb {
+  border-color: transparent;
+}
+[data-theme="dark"] .news-slideshow-thumb.active {
+  border-color: var(--red);
 }
 
 /* ---- Results Tables ---- */
@@ -6734,9 +6787,5 @@ ul { list-style: none; }
   }
   .news-article-body h2 {
     font-size: 1.15rem;
-  }
-  .news-article-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 8px;
   }
 }

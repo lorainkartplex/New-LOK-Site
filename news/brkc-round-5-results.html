@@ -135,16 +135,23 @@
     <div class="container">
       <div class="news-article-wrap">
         <a href="../news.html" class="news-article-back">&larr; Back to News</a>
-        <div class="news-article-hero-grid">
-          <figure class="news-article-hero">
-            <img src="../images/Ian Quinn Round 5.jpg" alt="Ian Quinn at BRKC Round 5" />
+        <div class="news-slideshow" id="heroSlideshow">
+          <figure class="news-slideshow-main">
+            <img src="../images/Ian Quinn Round 5.jpg" alt="Ian Quinn at BRKC Round 5" class="news-slideshow-img active" data-index="0" />
+            <img src="../images/Ashlyn Taylor Round 5.jpg" alt="Ashlyn Taylor at BRKC Round 5" class="news-slideshow-img" data-index="1" />
+            <img src="../images/Anna McCrone BRKC Round 5.jpg" alt="Anna McCrone at BRKC Round 5" class="news-slideshow-img" data-index="2" />
           </figure>
-          <figure class="news-article-hero">
-            <img src="../images/Ashlyn Taylor Round 5.jpg" alt="Ashlyn Taylor at BRKC Round 5" />
-          </figure>
-          <figure class="news-article-hero">
-            <img src="../images/Anna McCrone BRKC Round 5.jpg" alt="Anna McCrone at BRKC Round 5" />
-          </figure>
+          <div class="news-slideshow-thumbs">
+            <button class="news-slideshow-thumb active" data-index="0">
+              <img src="../images/Ian Quinn Round 5.jpg" alt="Ian Quinn" />
+            </button>
+            <button class="news-slideshow-thumb" data-index="1">
+              <img src="../images/Ashlyn Taylor Round 5.jpg" alt="Ashlyn Taylor" />
+            </button>
+            <button class="news-slideshow-thumb" data-index="2">
+              <img src="../images/Anna McCrone BRKC Round 5.jpg" alt="Anna McCrone" />
+            </button>
+          </div>
         </div>
         <div class="news-article-meta">
           <span class="news-card-badge">Race Results</span>
