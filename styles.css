@@ -4658,6 +4658,10 @@ ul { list-style: none; }
   .content-icon-placeholder { width: 140px; height: 140px; font-size: 4rem; }
   .content-visual .track-3d-scene { max-width: 180px; margin: 0 auto; }
   .content-visual .track-3d-scene.track-scene-lg { max-width: 280px !important; }
+  .content-text { text-align: center; }
+  .content-features { align-items: center; }
+  .content-features li { justify-content: center; }
+  .class-group-header { text-align: center; align-items: center; }
 }
 
 /* ============================================================
