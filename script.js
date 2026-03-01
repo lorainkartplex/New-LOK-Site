@@ -511,16 +511,6 @@
   }
   setupTabs('.class-tab', '.class-tab-panel');
   setupTabs('.mem-tab', '.mem-tab-panel');
-  setupTabs('.facility-tab', '.facility-tab-panel');
-
-  /* ---- Hero buttons that activate a facility tab ---- */
-  document.querySelectorAll('[data-tab-target]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var target = btn.getAttribute('data-tab-target');
-      var tab = document.querySelector('.facility-tab[data-tab="' + target + '"]');
-      if (tab) tab.click();
-    });
-  });
 
   /* ---- Video gallery view more/less toggle ---- */
   var videoToggle = document.getElementById('videoToggle');
